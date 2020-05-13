@@ -5,8 +5,8 @@ generate:
 weighted_entries:
   amulet_gold:
     weight: 1
-    adjective1:
-      none: 2
+    adjectives:
+    - none: 2
       perception3: 2
       wisdom3: 2
       intellect3: 2
@@ -15,10 +15,12 @@ weighted_entries:
       warlock_power3: 2
       mage_ability3: 2
       ability3: 2
+    - identified: 33
+      unidentified: 67
   amulet_silver:
     weight: 2
-    adjective1:
-      none: 2
+    adjectives:
+    - none: 2
       perception3: 2
       wisdom3: 2
       intellect3: 2
@@ -27,10 +29,12 @@ weighted_entries:
       warlock_power3: 2
       mage_ability3: 2
       ability3: 2
+    - identified: 33
+      unidentified: 67
   belt_leather:
     weight: 2
-    adjective1:
-      none: 2
+    adjectives:
+    - none: 2
       strength3: 2
       endurance3: 2
       fortitude15: 2
@@ -38,10 +42,12 @@ weighted_entries:
       resistance_crushing3: 2
       resistance_piercing3: 2
       resistance_slashing3: 2
+    - identified: 33
+      unidentified: 67
   cloak:
     weight: 2
-    adjective1:
-      none: 2
+    adjectives:
+    - none: 2
       dexterity3: 2
       concealment15: 2
       defense15: 2
@@ -49,10 +55,12 @@ weighted_entries:
       resistance_cold3: 2
       resistance_shock3: 2
       resistance_fire3: 2
+    - identified: 33
+      unidentified: 67
   ring_copper:
     weight: 2
-    adjective1:
-      none: 1
+    adjectives:
+    - none: 1
       accuracy15: 1
       defense15: 1
       fortitude15: 1
@@ -60,10 +68,12 @@ weighted_entries:
       will15: 1
       reach3: 1
       action3: 1
+    - identified: 33
+      unidentified: 67
   ring_silver:
     weight: 2
-    adjective1:
-      none: 1
+    adjectives:
+    - none: 1
       accuracy15: 1
       defense15: 1
       fortitude15: 1
@@ -71,10 +81,12 @@ weighted_entries:
       will15: 1
       reach3: 1
       action3: 1
+    - identified: 33
+      unidentified: 67
   ring_gold:
     weight: 1
-    adjective1:
-      none: 1
+    adjectives:
+    - none: 1
       accuracy15: 1
       defense15: 1
       fortitude15: 1

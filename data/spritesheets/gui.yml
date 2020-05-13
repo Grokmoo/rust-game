@@ -653,6 +653,7 @@ groups:
       status_will: [416, 32]
       status_movement: [416, 64]
       status_flanking: [448, 64]
+      status_blank: [448, 0]
   feedback_icons:
     size: [64, 64]
     position: [1568, 960]

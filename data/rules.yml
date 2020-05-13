@@ -43,6 +43,7 @@ max_prop_distance: 2.5
 
 item_weight_display_factor: 100
 item_value_display_factor: 10
+unidentified_item_adjective: unidentified
 coins_item: coin
 
 selectable_races: [ dracon, dwarf, elf, human, kimer, rodian, trollkin ]

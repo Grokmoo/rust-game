@@ -5,8 +5,8 @@ generate:
 weighted_entries:
   amulet_gold:
     weight: 1
-    adjective1:
-      none: 4
+    adjectives:
+    - none: 4
       perception2: 2
       wisdom2: 2
       intellect2: 2
@@ -15,10 +15,12 @@ weighted_entries:
       warlock_power2: 2
       mage_ability2: 2
       ability2: 2
+    - identified: 70
+      unidentified: 30
   amulet_silver:
     weight: 2
-    adjective1:
-      none: 4
+    adjectives:
+    - none: 4
       perception2: 2
       wisdom2: 2
       intellect2: 2
@@ -27,10 +29,12 @@ weighted_entries:
       warlock_power2: 2
       mage_ability2: 2
       ability2: 2
+    - identified: 70
+      unidentified: 30
   belt_leather:
     weight: 2
-    adjective1:
-      none: 4
+    adjectives:
+    - none: 4
       strength2: 2
       endurance2: 2
       fortitude10: 2
@@ -38,10 +42,12 @@ weighted_entries:
       resistance_crushing2: 2
       resistance_piercing2: 2
       resistance_slashing2: 2
+    - identified: 70
+      unidentified: 30
   cloak:
     weight: 2
-    adjective1:
-      none: 4
+    adjectives:
+    - none: 4
       dexterity2: 2
       concealment10: 2
       defense10: 2
@@ -49,10 +55,12 @@ weighted_entries:
       resistance_cold2: 2
       resistance_shock2: 2
       resistance_fire2: 2
+    - identified: 70
+      unidentified: 30
   ring_copper:
     weight: 2
-    adjective1:
-      none: 2
+    adjectives:
+    - none: 2
       accuracy10: 1
       defense10: 1
       fortitude10: 1
@@ -60,10 +68,12 @@ weighted_entries:
       will10: 1
       reach2: 1
       action2: 1
+    - identified: 70
+      unidentified: 30
   ring_silver:
     weight: 2
-    adjective1:
-      none: 2
+    adjectives:
+    - none: 2
       accuracy10: 1
       defense10: 1
       fortitude10: 1
@@ -71,10 +81,12 @@ weighted_entries:
       will10: 1
       reach2: 1
       action2: 1
+    - identified: 70
+      unidentified: 30
   ring_gold:
     weight: 1
-    adjective1:
-      none: 2
+    adjectives:
+    - none: 2
       accuracy10: 1
       defense10: 1
       fortitude10: 1

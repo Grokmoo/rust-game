@@ -898,8 +898,9 @@ impl ActorState {
                     equippable
                 }
             };
-
-            self.stats.add(&equippable.bonuses);
+            if item_state.identified {
+                self.stats.add(&equippable.bonuses);
+            }
         }
 
         for (_, ref bonuses) in self.effects.iter() {

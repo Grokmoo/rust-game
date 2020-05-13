@@ -8,11 +8,10 @@ sub_lists:
 probability_entries:
   torso_robe:
     weight: 50
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       masterwork: 5
-    adjective2:
-      none: 8
+    - none: 8
       will15: 2
       intellect3: 2
       mage_ability3: 2
@@ -23,11 +22,10 @@ probability_entries:
       resistance_fire3: 2
   helm_hood:
     weight: 50
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       masterwork: 5
-    adjective2:
-      none: 2
+    - none: 2
       concealment15: 2
       wisdom2: 2
       concealment_ignore3: 2
@@ -35,11 +33,10 @@ probability_entries:
       bard_inspiration3: 2
   helm_hat:
     weight: 50
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       masterwork: 5
-    adjective2:
-      none: 2
+    - none: 2
       reflex15: 2
       dexterity3: 2
       concealment_ignore3: 2
@@ -47,11 +44,10 @@ probability_entries:
       bard_inspiration3: 2
   boots_leather:
     weight: 10
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       masterwork: 5
-    adjective2:
-      none: 2
+    - none: 2
       movement15: 2
       flanking15: 2
       initiative2: 2
@@ -59,11 +55,10 @@ probability_entries:
       resistance_cold3: 2
   druid_staff:
     weight: 50
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       masterwork: 5
-    adjective2:
-      none: 2
+    - none: 2
       weapon_accuracy15: 1
       acid15: 1
       cold15: 1

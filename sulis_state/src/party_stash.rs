@@ -85,6 +85,10 @@ impl PartyStash {
         result
     }
 
+    pub fn identify(&mut self, index: usize) -> Option<&ItemState> {
+        self.items.identify(index)
+    }
+
     /// Takes all items out of the specified prop and into this stash
     pub fn take_all(&mut self, prop_index: usize) {
         let area_state = GameState::area_state();

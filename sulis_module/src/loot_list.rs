@@ -17,7 +17,7 @@
 use std::collections::HashMap;
 use std::io::Error;
 
-use sulis_core::util::{gen_rand, unable_to_create_error};
+use sulis_core::util::{gen_rand, gen_rand_weight, unable_to_create_error};
 
 use crate::{ItemState, Module};
 
@@ -27,15 +27,10 @@ const MAX_DEPTH: u32 = 10;
 struct Entry {
     id: String,
     weight: u32,
+    identified: bool,
     quantity: [u32; 2],
 
-    adjective1_total_weight: u32,
-    adjective1: Vec<(String, u32)>,
-
-    adjective2_total_weight: u32,
-    adjective2: Vec<(String, u32)>,
-
-    variant_total_weight: u32,
+    adjectives: Vec<Vec<(String, u32)>>,
     variant: Vec<(usize, u32)>,
 }
 
@@ -105,8 +100,7 @@ impl LootList {
         id: String,
         entry_in: EntryBuilder,
     ) -> Result<Entry, Error> {
-        if !entry_in.adjective1.is_empty()
-            || !entry_in.adjective2.is_empty()
+        if !entry_in.adjectives.iter().all(|e| e.is_empty())
             || !entry_in.variant.is_empty()
         {
             warn!(
@@ -124,13 +118,10 @@ impl LootList {
         Ok(Entry {
             id,
             weight: entry_in.weight,
+            identified: true,
             quantity: [min_qty, max_qty],
-            adjective1: Vec::new(),
-            adjective1_total_weight: 0,
-            adjective2: Vec::new(),
-            adjective2_total_weight: 0,
+            adjectives: Vec::new(),
             variant: Vec::new(),
-            variant_total_weight: 0,
         })
     }
 
@@ -150,38 +141,31 @@ impl LootList {
             Some(qty) => (qty[0], qty[1]),
         };
 
-        let mut adjective1 = Vec::new();
-        let mut adjective1_total_weight = 0;
-        for (id, weight) in entry_in.adjective1 {
-            adjective1_total_weight += weight;
-            if id == "none" {
-                continue;
-            }
-            if module.item_adjectives.get(&id).is_none() {
-                warn!("Unable to find item adjective '{}'", id);
-                return unable_to_create_error("loot_list", &builder_id);
-            }
-            adjective1.push((id, weight));
-        }
+        let mut identified = true;
+        let mut adjectives = vec![];
 
-        let mut adjective2 = Vec::new();
-        let mut adjective2_total_weight = 0;
-        for (id, weight) in entry_in.adjective2 {
-            adjective2_total_weight += weight;
-            if id == "none" {
-                continue;
+        for in_adj in entry_in.adjectives.iter() {
+            let mut adj = vec![];
+            for (id, weight) in in_adj.iter() {
+                match id.as_str() {
+                    "none" | "identified" => continue,
+                    "unidentified" => {
+                        identified = false;
+                        continue;
+                    },
+                    _ => {},
+                }
+                if module.item_adjectives.get(id).is_none() {
+                    warn!("Unable to find item adjective '{}'", id);
+                    return unable_to_create_error("loot_list", &builder_id);
+                }
+                adj.push((id.to_string(), *weight));
             }
-            if module.item_adjectives.get(&id).is_none() {
-                warn!("Unable to find item adjective '{}'", id);
-                return unable_to_create_error("loot_list", &builder_id);
-            }
-            adjective2.push((id, weight));
+            adjectives.push(adj);
         }
 
         let mut variant = Vec::new();
-        let mut variant_total_weight = 0;
         for (id, weight) in entry_in.variant {
-            variant_total_weight += weight;
             if id == "none" {
                 continue;
             }
@@ -198,13 +182,10 @@ impl LootList {
         Ok(Entry {
             id,
             weight: entry_in.weight,
+            identified,
             quantity: [min_qty, max_qty],
-            adjective1,
-            adjective1_total_weight,
-            adjective2,
-            adjective2_total_weight,
+            adjectives,
             variant,
-            variant_total_weight,
         })
     }
 
@@ -263,7 +244,7 @@ impl LootList {
                     Some(item) => item,
                 };
                 let variant = self.gen_variant(entry);
-                items.push((quantity, ItemState::new(item, variant)));
+                items.push((quantity, ItemState::new(item, variant, entry.identified)));
             }
         }
 
@@ -301,29 +282,10 @@ impl LootList {
 
     fn gen_adjectives(&self, entry: &Entry) -> Vec<String> {
         let mut result = Vec::new();
-        if entry.adjective1_total_weight > 0 {
-            let roll = gen_rand(0, entry.adjective1_total_weight);
-
-            let mut cur_weight = 0;
-            for (id, weight) in entry.adjective1.iter() {
-                cur_weight += weight;
-                if roll < cur_weight {
-                    result.push(id.clone());
-                    break;
-                }
-            }
-        }
-
-        if entry.adjective2_total_weight > 0 {
-            let roll = gen_rand(0, entry.adjective2_total_weight);
-
-            let mut cur_weight = 0;
-            for (id, weight) in entry.adjective2.iter() {
-                cur_weight += weight;
-                if roll < cur_weight {
-                    result.push(id.clone());
-                    break;
-                }
+        for adj in entry.adjectives.iter() {
+            if !adj.is_empty() {
+                let pick = gen_rand_weight(&adj);
+                result.push(pick.clone());
             }
         }
 
@@ -331,17 +293,10 @@ impl LootList {
     }
 
     fn gen_variant(&self, entry: &Entry) -> Option<usize> {
-        if entry.variant_total_weight > 0 {
-            let roll = gen_rand(0, entry.variant_total_weight);
-            let mut cur_weight = 0;
-            for (id, weight) in entry.variant.iter() {
-                cur_weight += weight;
-                if roll < cur_weight {
-                    return Some(*id);
-                }
-            }
+        if !entry.variant.is_empty() {
+            let pick = gen_rand_weight(&entry.variant);
+            return Some(*pick);
         }
-
         None
     }
 
@@ -370,7 +325,7 @@ impl LootList {
                     Some(item) => item,
                 };
                 let variant = self.gen_variant(entry);
-                return Some((quantity, ItemState::new(item, variant)));
+                return Some((quantity, ItemState::new(item, variant, entry.identified)));
             }
         }
 
@@ -402,9 +357,7 @@ struct EntryBuilder {
     weight: u32,
     quantity: Option<[u32; 2]>,
     #[serde(default)]
-    adjective1: HashMap<String, u32>,
-    #[serde(default)]
-    adjective2: HashMap<String, u32>,
+    adjectives: Vec<HashMap<String, u32>>,
 
     #[serde(default)]
     variant: HashMap<String, u32>,

@@ -49,7 +49,7 @@ impl ScriptItemKind {
             },
             ScriptItemKind::WithID(id) => match Module::item(id) {
                 None => None,
-                Some(item) => Some(ItemState::new(item, None)),
+                Some(item) => Some(ItemState::new(item, None, true)),
             },
         }
     }
@@ -70,7 +70,7 @@ impl ScriptItemKind {
             },
             ScriptItemKind::WithID(id) => match Module::item(id) {
                 None => unreachable!(),
-                Some(item) => ItemState::new(item, None),
+                Some(item) => ItemState::new(item, None, true),
             },
         }
     }
@@ -133,7 +133,7 @@ impl ScriptItem {
             parent: parent.borrow().index(),
             kind,
             id: item.item.id.to_string(),
-            name: item.item.name.to_string(),
+            name: item.get_name(),
             ap,
         })
     }

@@ -4,11 +4,10 @@ weighted_entries: {}
 probability_entries:
   torso_robe:
     weight: 50
-    adjective1:
-      none: 4
+    adjectives:
+    - none: 4
       fine: 6
-    adjective2:
-      none: 5
+    - none: 5
       will5: 2
       intellect1: 2
       mage_ability1: 2
@@ -19,11 +18,10 @@ probability_entries:
       resistance_fire1: 2
   helm_hood:
     weight: 50
-    adjective1:
-      none: 4
+    adjectives:
+    - none: 4
       fine: 6
-    adjective2:
-      none: 4
+    - none: 4
       concealment5: 2
       wisdom1: 2
       concealment_ignore1: 2
@@ -31,11 +29,10 @@ probability_entries:
       bard_inspiration1: 2
   helm_hat:
     weight: 50
-    adjective1:
-      none: 4
+    adjectives:
+    - none: 4
       fine: 6
-    adjective2:
-      none: 4
+    - none: 4
       reflex5: 2
       dexterity1: 2
       concealment_ignore1: 2
@@ -43,11 +40,10 @@ probability_entries:
       bard_inspiration1: 2
   boots_leather:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 4
+    - none: 4
       movement5: 2
       flanking5: 2
       initiative1: 2
@@ -55,11 +51,10 @@ probability_entries:
       resistance_cold1: 2
   boots_mail:
     weight: 70
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 4
+    - none: 4
       movement5: 2
       flanking5: 2
       initiative1: 2
@@ -67,11 +62,10 @@ probability_entries:
       resistance_cold1: 2
   boots_plate:
     weight: 50
-    adjective1:
-      none: 8
+    adjectives:
+    - none: 8
       fine: 2
-    adjective2:
-      none: 4
+    - none: 4
       movement5: 2
       flanking5: 2
       initiative1: 2
@@ -79,110 +73,100 @@ probability_entries:
       resistance_cold1: 2
   gloves_leather:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 3
+    - none: 3
       reflex5: 2
       dexterity1: 2
       reach1: 2
       resistance_fire1: 2
   gloves_mail:
     weight: 70
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 3
+    - none: 3
       reflex5: 2
       dexterity1: 2
       reach1: 2
       resistance_fire1: 2
   gloves_plate:
     weight: 50
-    adjective1:
-      none: 8
+    adjectives:
+    - none: 8
       fine: 2
-    adjective2:
-      none: 3
+    - none: 3
       reflex5: 2
       dexterity1: 2
       reach1: 2
       resistance_fire1: 2
   helm_leather:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 3
+    - none: 3
       perception1: 2
       accuracy5: 2
       concealment_ignore1: 2
       resistance_acid1: 2
   helm_mail:
     weight: 70
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 3
+    - none: 3
       perception1: 2
       accuracy5: 2
       concealment_ignore1: 2
       resistance_acid1: 2
   helm_plate:
     weight: 50
-    adjective1:
-      none: 8
+    adjectives:
+    - none: 8
       fine: 2
-    adjective2:
-      none: 3
+    - none: 3
       perception1: 2
       accuracy5: 2
       concealment_ignore1: 2
       resistance_acid1: 2
   legs_leather:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 3
+    - none: 3
       movement5: 2
       endurance1: 2
       action1: 2
       hit_points1: 2
   legs_mail:
     weight: 70
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 3
+    - none: 3
       movement5: 2
       endurance1: 2
       action1: 2
       hit_points1: 2
   legs_plate:
     weight: 50
-    adjective1:
-      none: 8
+    adjectives:
+    - none: 8
       fine: 2
-    adjective2:
-      none: 3
+    - none: 3
       movement5: 2
       endurance1: 2
       action1: 2
       hit_points1: 2
   torso_leather:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 5
+    - none: 5
       fortitude5: 2
       strength1: 2
       resistance_shock1: 2
@@ -191,11 +175,10 @@ probability_entries:
       resistance_slashing1: 2
   torso_mail:
     weight: 70
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 5
+    - none: 5
       fortitude5: 2
       strength1: 2
       resistance_shock1: 2
@@ -204,11 +187,10 @@ probability_entries:
       resistance_slashing1: 2
   torso_plate:
     weight: 50
-    adjective1:
-      none: 8
+    adjectives:
+    - none: 8
       fine: 2
-    adjective2:
-      none: 5
+    - none: 5
       fortitude5: 2
       strength1: 2
       resistance_shock1: 2
@@ -217,11 +199,10 @@ probability_entries:
       resistance_slashing1: 2
   shield_small:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 5
+    - none: 5
       defense5: 2
       reflex5: 2
       reach1: 2
@@ -234,11 +215,10 @@ probability_entries:
       "0": 1
   shield_heater:
     weight: 70
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 5
+    - none: 5
       defense5: 2
       reflex5: 2
       reach1: 2
@@ -251,11 +231,10 @@ probability_entries:
       "0": 1
   shield_kite:
     weight: 70
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 5
+    - none: 5
       defense5: 2
       reflex5: 2
       reach1: 2
@@ -268,11 +247,10 @@ probability_entries:
       "0": 1
   shield_large:
     weight: 50
-    adjective1:
-      none: 8
+    adjectives:
+    - none: 8
       fine: 2
-    adjective2:
-      none: 5
+    - none: 5
       defense5: 2
       reflex5: 2
       reach1: 2
@@ -286,11 +264,10 @@ probability_entries:
 
   battleaxe:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -302,8 +279,8 @@ probability_entries:
       concealment_ignore1: 1
   club:
     weight: 80
-    adjective2:
-      none: 7
+    adjectives:
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -315,11 +292,10 @@ probability_entries:
       concealment_ignore1: 1
   crossbow:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       ranged_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -331,11 +307,10 @@ probability_entries:
       concealment_ignore1: 1
   dagger:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -347,11 +322,10 @@ probability_entries:
       concealment_ignore1: 1
   flail:
     weight: 60
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -363,11 +337,10 @@ probability_entries:
       concealment_ignore1: 1
   greataxe:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -379,11 +352,10 @@ probability_entries:
       concealment_ignore1: 1
   greathammer:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -395,11 +367,10 @@ probability_entries:
       concealment_ignore1: 1
   greatsword:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -411,11 +382,10 @@ probability_entries:
       concealment_ignore1: 1
   hatchet:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -427,11 +397,10 @@ probability_entries:
       concealment_ignore1: 1
   longbow:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       ranged_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -443,11 +412,10 @@ probability_entries:
       concealment_ignore1: 1
   longspear:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -459,11 +427,10 @@ probability_entries:
       concealment_ignore1: 1
   longsword:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -475,11 +442,10 @@ probability_entries:
       concealment_ignore1: 1
   mace:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -491,11 +457,10 @@ probability_entries:
       concealment_ignore1: 1
   morningstar:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -507,11 +472,10 @@ probability_entries:
       concealment_ignore1: 1
   quarterstaff:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -523,11 +487,10 @@ probability_entries:
       concealment_ignore1: 1
   druid_staff:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -539,11 +502,10 @@ probability_entries:
       concealment_ignore1: 1
   shortbow:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       ranged_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -555,11 +517,10 @@ probability_entries:
       concealment_ignore1: 1
   shortspear:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -571,11 +532,10 @@ probability_entries:
       concealment_ignore1: 1
   shortsword:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -587,11 +547,10 @@ probability_entries:
       concealment_ignore1: 1
   warhammer:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -603,11 +562,10 @@ probability_entries:
       concealment_ignore1: 1
   sickle:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -619,11 +577,10 @@ probability_entries:
       concealment_ignore1: 1
   sabre:
     weight: 60
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -635,11 +592,10 @@ probability_entries:
       concealment_ignore1: 1
   scimitar:
     weight: 60
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -651,11 +607,10 @@ probability_entries:
       concealment_ignore1: 1
   halberd:
     weight: 60
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -667,11 +622,10 @@ probability_entries:
       concealment_ignore1: 1
   glaive:
     weight: 60
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       fine: 5
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1

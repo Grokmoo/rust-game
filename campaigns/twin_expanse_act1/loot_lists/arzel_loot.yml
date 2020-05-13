@@ -3,7 +3,7 @@ generate: {}
 probability_entries:
   amulet_gold:
     weight: 100
-    adjective1:
-      intellect2: 2
+    adjectives:
+    - intellect2: 2
   aegis_staff:
     weight: 100

@@ -174,6 +174,39 @@ pub fn sell_item_cb(entity: &Rc<RefCell<EntityState>>, index: usize) -> Callback
     }))
 }
 
+pub fn identify_item_cb(entity: &Rc<RefCell<EntityState>>, index: usize) -> Callback {
+    let entity = Rc::clone(entity);
+    Callback::new(Rc::new(move |widget, _| {
+        let (root, root_view) = Widget::parent_mut::<RootView>(widget);
+        let merchant = match root_view.get_merchant_window(&root) {
+            None => return,
+            Some(ref window) => {
+                let merchant_window = Widget::kind_mut::<MerchantWindow>(&window);
+                merchant_window.merchant_id().to_string()
+            }
+        };
+
+        let area_state = GameState::area_state();
+        let area_state = area_state.borrow();
+
+        if let Some(merchant) = area_state.get_merchant(&merchant) {
+
+            let stash = GameState::party_stash();
+            if let Some(item_state) = stash.borrow_mut().identify(index) {
+                let price = merchant.get_sell_price(&item_state) as f32;
+                let charge = (price * merchant.identify_fraction.ceil()) as i32;
+                if GameState::party_coins() < charge {
+                    return;
+                }
+                GameState::add_party_coins(-charge);
+            }
+
+            let actor = &entity.borrow().actor;
+            actor.listeners.notify(actor);
+        }
+    }))
+}
+
 pub fn drop_item_cb(entity: &Rc<RefCell<EntityState>>, index: usize) -> Callback {
     let entity = Rc::clone(entity);
     Callback::new(Rc::new(move |widget, _| {

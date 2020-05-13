@@ -36,7 +36,8 @@ use std::{thread, time};
 use backtrace::Backtrace;
 use log::LevelFilter;
 use flexi_logger::{opt_format, Duplicate, Logger, LogSpecBuilder};
-use rand::{self, distributions::uniform::SampleUniform, seq::SliceRandom, Rng};
+use rand::prelude::*;
+use rand::{self, distributions::{WeightedIndex,uniform::SampleUniform}, seq::SliceRandom, Rng};
 use rand_pcg::Pcg64Mcg;
 
 use crate::config::{self, Config};
@@ -73,7 +74,7 @@ impl ReproducibleRandom {
         // TODO only seed with u64 for now because serde_yaml doesn't serialize u128 correctly
         let seed = match seed {
             Some(s) => s,
-            None => rand::thread_rng().gen::<u64>() as u128,
+            None => thread_rng().gen::<u64>() as u128,
         };
 
         ReproducibleRandom {
@@ -103,11 +104,21 @@ impl std::fmt::Debug for ReproducibleRandom {
 }
 
 pub fn shuffle<T>(values: &mut [T]) {
-    values.shuffle(&mut rand::thread_rng());
+    values.shuffle(&mut thread_rng());
 }
 
 pub fn gen_rand<T: SampleUniform + Sized>(min: T, max: T) -> T {
-    rand::thread_rng().gen_range(min, max)
+    thread_rng().gen_range(min, max)
+}
+
+pub fn gen_rand_weight<'a, T, V>(items: &'a [(T, V)]) -> &'a T
+where
+    V: Sized + Clone + Default + PartialOrd + Copy,
+    V: for<'b> std::ops::AddAssign<&'b V>,
+    V: SampleUniform,
+{
+    let dist = WeightedIndex::new(items.iter().map(|item| item.1)).unwrap();
+    &items[dist.sample(&mut thread_rng())].0
 }
 
 fn active_resources_file_path() -> PathBuf {

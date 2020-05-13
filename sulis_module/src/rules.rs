@@ -106,6 +106,7 @@ pub struct Rules {
     pub item_value_display_factor: f32,
 
     pub coins_item: String,
+    pub unidentified_item_adjective: String,
 
     armor_damage_reduction_cap: Vec<u32>,
 

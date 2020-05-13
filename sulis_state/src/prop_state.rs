@@ -71,6 +71,7 @@ impl PropState {
             let quantity = item_save.quantity;
             let item = &item_save.item;
             let variant = item.variant;
+            let identified = item.identified;
             let item = match Module::create_get_item(&item.id, &item.adjectives) {
                 None => {
                     warn!(
@@ -81,7 +82,7 @@ impl PropState {
                 }
                 Some(item) => item,
             };
-            items.add_quantity(quantity, ItemState::new(item, variant));
+            items.add_quantity(quantity, ItemState::new(item, variant, identified));
         }
 
         let mut anim_state = AnimationState::default();
@@ -162,6 +163,7 @@ impl PropState {
                 for item_save_state in items {
                     let item = &item_save_state.item;
                     let variant = item.variant;
+                    let identified = !item.adjectives.contains(&Module::rules().unidentified_item_adjective);
                     let item = match Module::create_get_item(&item.id, &item.adjectives) {
                         None => invalid_data_error(&format!(
                             "No item with ID '{}'",
@@ -170,7 +172,7 @@ impl PropState {
                         Some(item) => Ok(item),
                     }?;
 
-                    item_list.add_quantity(item_save_state.quantity, ItemState::new(item, variant));
+                    item_list.add_quantity(item_save_state.quantity, ItemState::new(item, variant, identified));
                 }
 
                 let loot = match loot_to_generate {

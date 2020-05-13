@@ -4,160 +4,140 @@ weighted_entries: {}
 probability_entries:
   boots_mail:
     weight: 70
-    adjective1:
-      none: 9
+    adjectives:
+    - none: 9
       fine: 1
-    adjective2:
-      none: 7
+    - none: 7
       movement5: 2
       flanking5: 2
       initiative1: 2
   boots_plate:
     weight: 30
-    adjective2:
-      none: 7
+    - none: 7
       movement5: 2
       flanking5: 2
       initiative1: 2
   dwarven_boots_plate:
     weight: 50
-    adjective2:
-      none: 7
+    - none: 7
       movement5: 2
       flanking5: 2
       initiative1: 2
   gloves_mail:
     weight: 70
-    adjective1:
-      none: 9
+    adjectives:
+    - none: 9
       fine: 1
-    adjective2:
-      none: 5
+    - none: 5
       reflex5: 2
       dexterity1: 2
   gloves_plate:
     weight: 30
-    adjective2:
-      none: 5
+    - none: 5
       reflex5: 2
       dexterity1: 2
   dwarven_gloves_plate:
     weight: 50
-    adjective2:
-      none: 5
+    - none: 5
       reflex5: 2
       dexterity1: 2
   helm_mail:
     weight: 70
-    adjective1:
-      none: 9
+    adjectives:
+    - none: 9
       fine: 1
   helm_plate:
     weight: 30
-    adjective2:
-      none: 5
+    - none: 5
       perception1: 2
       accuracy5: 2
   dwarven_helm_plate:
     weight: 50
-    adjective2:
-      none: 5
+    - none: 5
       perception1: 2
       accuracy5: 2
   legs_mail:
     weight: 70
-    adjective1:
-      none: 9
+    adjectives:
+    - none: 9
       fine: 1
-    adjective2:
-      none: 5
+    - none: 5
       movement5: 2
       endurance1: 2
   legs_plate:
     weight: 30
-    adjective2:
-      none: 5
+    - none: 5
       movement5: 2
       endurance1: 2
   dwarven_legs_plate:
     weight: 50
-    adjective2:
-      none: 5
+    - none: 5
       movement5: 2
       endurance1: 2
   torso_mail:
     weight: 70
-    adjective1:
-      none: 9
+    adjectives:
+    - none: 9
       fine: 1
-    adjective2:
-      none: 5
+    - none: 5
       fortitude5: 2
       strength1: 2
   torso_plate:
     weight: 30
-    adjective2:
-      none: 5
+    - none: 5
       fortitude5: 2
       strength1: 2
   dwarven_torso_plate:
     weight: 50
-    adjective2:
-      none: 5
+    - none: 5
       fortitude5: 2
       strength1: 2
   shield_small:
     weight: 70
-    adjective1:
-      none: 8
+    adjectives:
+    - none: 8
       fine: 2
-    adjective2:
-      none: 5
+    - none: 5
       defense5: 2
       reflex5: 2
   shield_large:
     weight: 50
-    adjective1:
-      none: 8
+    adjectives:
+    - none: 8
       fine: 2
-    adjective2:
-      none: 5
+    - none: 5
       defense5: 2
       reflex5: 2
   shield_heater:
     weight: 60
-    adjective1:
-      none: 8
+    adjectives:
+    - none: 8
       fine: 2
-    adjective2:
-      none: 5
+    - none: 5
       defense5: 2
       reflex5: 2
   shield_kite:
     weight: 60
-    adjective1:
-      none: 8
+    adjectives:
+    - none: 8
       fine: 2
-    adjective2:
-      none: 5
+    - none: 5
       defense5: 2
       reflex5: 2
   dwarven_shield:
     weight: 80
-    adjective1:
-      none: 8
+    adjectives:
+    - none: 8
       fine: 2
-    adjective2:
-      none: 5
+    - none: 5
       defense5: 2
       reflex5: 2
   dwarven_battleaxe:
     weight: 70
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -167,11 +147,10 @@ probability_entries:
       damage5: 1
   battleaxe:
     weight: 50
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -181,11 +160,10 @@ probability_entries:
       damage5: 1
   dwarven_crossbow:
     weight: 70
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       ranged_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -195,11 +173,10 @@ probability_entries:
       damage5: 1
   dagger:
     weight: 80
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -209,11 +186,10 @@ probability_entries:
       damage5: 1
   flail:
     weight: 10
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -223,11 +199,10 @@ probability_entries:
       damage5: 1
   dwarven_greataxe:
     weight: 40
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -237,11 +212,10 @@ probability_entries:
       damage5: 1
   greataxe:
     weight: 10
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -251,11 +225,10 @@ probability_entries:
       damage5: 1
   dwarven_greathammer:
     weight: 40
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -265,11 +238,10 @@ probability_entries:
       damage5: 1
   greathammer:
     weight: 10
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -279,11 +251,10 @@ probability_entries:
       damage5: 1
   greatsword:
     weight: 10
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -293,11 +264,10 @@ probability_entries:
       damage5: 1
   hatchet:
     weight: 80
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -307,11 +277,10 @@ probability_entries:
       damage5: 1
   dwarven_longspear:
     weight: 60
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -320,11 +289,10 @@ probability_entries:
       crits5: 1
   longspear:
     weight: 20
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -334,11 +302,10 @@ probability_entries:
       damage5: 1
   longsword:
     weight: 20
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -348,11 +315,10 @@ probability_entries:
       damage5: 1
   mace:
     weight: 50
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -362,11 +328,10 @@ probability_entries:
       damage5: 1
   morningstar:
     weight: 20
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -376,11 +341,10 @@ probability_entries:
       damage5: 1
   shortspear:
     weight: 50
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -390,11 +354,10 @@ probability_entries:
       damage5: 1
   shortsword:
     weight: 50
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -404,11 +367,10 @@ probability_entries:
       damage5: 1
   warhammer:
     weight: 50
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -418,11 +380,10 @@ probability_entries:
       damage5: 1
   sabre:
     weight: 30
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -432,11 +393,10 @@ probability_entries:
       damage5: 1
   scimitar:
     weight: 10
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       fine: 3
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -446,11 +406,10 @@ probability_entries:
       damage5: 1
   dwarven_halberd:
     weight: 40
-    adjective1:
-      none: 8
+    adjectives:
+    - none: 8
       fine: 2
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -460,11 +419,10 @@ probability_entries:
       damage5: 1
   halberd:
     weight: 10
-    adjective1:
-      none: 8
+    adjectives:
+    - none: 8
       fine: 2
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1
@@ -474,11 +432,10 @@ probability_entries:
       damage5: 1
   glaive:
     weight: 10
-    adjective1:
-      none: 8
+    adjectives:
+    - none: 8
       fine: 2
-    adjective2:
-      none: 7
+    - none: 7
       weapon_accuracy5: 1
       acid5: 1
       cold5: 1

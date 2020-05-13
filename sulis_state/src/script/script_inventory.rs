@@ -143,7 +143,7 @@ impl UserData for ScriptInventory {
             };
 
             let entity = entity.borrow();
-            let item = match entity.actor.inventory().equipped(slot) {
+            let item_state = match entity.actor.inventory().equipped(slot) {
                 None => {
                     warn!("No item equipped in slot '{:?}'", slot);
                     return Err(rlua::Error::FromLuaConversionError {
@@ -152,13 +152,13 @@ impl UserData for ScriptInventory {
                         message: Some(format!("No item equipped in slot '{:?}'", slot)),
                     });
                 }
-                Some(item) => item,
+                Some(item_state) => item_state,
             };
-
-            let item = &item.item;
-
             let stats = lua.create_table()?;
-            stats.set("name", item.name.to_string())?;
+            stats.set("name", item_state.get_name())?;
+
+            let item = &item_state.item;
+
             stats.set("value", item.value)?;
             stats.set("weight", item.weight)?;
 
@@ -375,7 +375,7 @@ impl UserData for ScriptUsableItem {
                 Some(item) => item,
             };
 
-            Ok(item.item.name.to_string())
+            Ok(item.get_name())
         });
     }
 }

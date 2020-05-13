@@ -24,6 +24,7 @@ use sulis_core::image::Image;
 pub struct ItemState {
     pub item: Rc<Item>,
     pub variant: Option<usize>,
+    pub identified: bool,
 }
 
 impl PartialEq for ItemState {
@@ -33,11 +34,12 @@ impl PartialEq for ItemState {
 }
 
 impl ItemState {
-    pub fn new(item: Rc<Item>, variant: Option<usize>) -> ItemState {
+    pub fn new(item: Rc<Item>, variant: Option<usize>, identified: bool) -> ItemState {
         match variant {
             None => ItemState {
                 item,
                 variant: None,
+                identified,
             },
             Some(idx) => {
                 if idx >= item.num_variants() {
@@ -45,9 +47,10 @@ impl ItemState {
                     ItemState {
                         item,
                         variant: None,
+                        identified,
                     }
                 } else {
-                    ItemState { item, variant }
+                    ItemState { item, variant, identified }
                 }
             }
         }
@@ -56,7 +59,7 @@ impl ItemState {
     pub fn from(id: &str) -> Option<ItemState> {
         match Module::item(id) {
             None => None,
-            Some(item) => Some(ItemState::new(item, None)),
+            Some(item) => Some(ItemState::new(item, None, true)),
         }
     }
 
@@ -70,5 +73,11 @@ impl ItemState {
 
     pub fn icon(&self) -> Rc<dyn Image> {
         self.item.icon(self.variant)
+    }
+    pub fn get_name(&self) -> String {
+        match &self.item.unidentified_name {
+            Some(unidentified_name) if !self.identified => unidentified_name.to_string(),
+            _ => self.item.name.to_string()
+        }
     }
 }

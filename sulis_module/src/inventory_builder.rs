@@ -40,6 +40,8 @@ impl ItemListEntrySaveState {
 #[serde(deny_unknown_fields)]
 pub struct ItemSaveState {
     pub id: String,
+    #[serde(default = "bool_true")]
+    pub identified: bool,
     #[serde(default)]
     pub adjectives: Vec<String>,
 
@@ -49,7 +51,7 @@ pub struct ItemSaveState {
 
 impl ItemSaveState {
     pub fn new(item: &ItemState) -> ItemSaveState {
-        let adjectives = item
+        let adjectives: Vec<_> = item
             .item
             .added_adjectives
             .iter()
@@ -58,11 +60,14 @@ impl ItemSaveState {
 
         ItemSaveState {
             id: item.item.original_id.clone(),
+            identified: item.identified,
             adjectives,
             variant: item.variant,
         }
     }
 }
+
+fn bool_true() -> bool { true }
 
 #[derive(Deserialize, Serialize, Debug, Clone)]
 #[serde(deny_unknown_fields, default)]
@@ -133,6 +138,7 @@ impl InventoryBuilder {
         self.pc_starting_items.iter().filter_map(|entry| {
             let qty = entry.quantity;
             let item = &entry.item;
+            let identified = item.identified;
             match Module::create_get_item(&item.id, &item.adjectives) {
                 None => {
                     warn!(
@@ -142,7 +148,7 @@ impl InventoryBuilder {
                     None
                 }
                 Some(item) => {
-                    let state = ItemState::new(item, entry.item.variant);
+                    let state = ItemState::new(item, entry.item.variant, identified);
                     Some((qty, state))
                 }
             }
@@ -170,7 +176,7 @@ impl InventoryBuilder {
                 return None;
             }
 
-            Some((slot, ItemState::new(item, item_save.variant)))
+            Some((slot, ItemState::new(item, item_save.variant, item_save.identified)))
         })
     }
 
@@ -208,7 +214,7 @@ impl InventoryBuilder {
                 }
             }
 
-            Some((slot, ItemState::new(item, item_save.variant)))
+            Some((slot, ItemState::new(item, item_save.variant, item_save.identified)))
         })
     }
 }

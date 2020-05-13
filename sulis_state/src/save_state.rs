@@ -381,6 +381,9 @@ pub struct MerchantSaveState {
     pub(crate) id: String,
     pub(crate) buy_frac: f32,
     pub(crate) sell_frac: f32,
+
+    #[serde(default = "default_identify_fraction")]
+    pub(crate) identify_fraction: f32,
     pub(crate) items: Vec<ItemListEntrySaveState>,
     #[serde(default)]
     pub(crate) refresh_rate_millis: usize,
@@ -404,6 +407,7 @@ impl MerchantSaveState {
             loot_list_id: merchant.loot_list_id.clone(),
             buy_frac: merchant.buy_frac,
             sell_frac: merchant.sell_frac,
+            identify_fraction: merchant.identify_fraction,
             items,
             refresh_rate_millis: merchant.refresh_rate_millis,
             last_refresh_millis: merchant.last_refresh_millis,
@@ -414,6 +418,8 @@ impl MerchantSaveState {
 fn serde_true() -> bool {
     true
 }
+
+fn default_identify_fraction() -> f32 { 0.2 }
 
 #[derive(Serialize, Deserialize, Debug)]
 #[serde(deny_unknown_fields)]

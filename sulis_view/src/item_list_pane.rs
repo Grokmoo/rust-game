@@ -249,7 +249,7 @@ impl WidgetKind for ItemListPane {
                 }
                 Some(item) => item,
             };
-            let coins_item_state = ItemState::new(coins_item, None);
+            let coins_item_state = ItemState::new(coins_item, None, true);
             let amount =
                 GameState::party_coins() as f32 / Module::rules().item_value_display_factor;
             let button = ItemButton::inventory(&coins_item_state, amount as u32, 0);

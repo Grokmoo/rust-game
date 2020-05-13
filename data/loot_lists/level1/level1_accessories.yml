@@ -5,8 +5,8 @@ generate:
 weighted_entries:
   amulet_gold:
     weight: 1
-    adjective1:
-      none: 16
+    adjectives:
+    - none: 16
       perception1: 2
       wisdom1: 2
       intellect1: 2
@@ -15,10 +15,12 @@ weighted_entries:
       warlock_power1: 2
       mage_ability1: 2
       ability1: 2
+    - identified: 90
+      unidentified: 10
   amulet_silver:
     weight: 2
-    adjective1:
-      none: 16
+    adjectives:
+    - none: 16
       perception1: 2
       wisdom1: 2
       intellect1: 2
@@ -27,10 +29,12 @@ weighted_entries:
       warlock_power1: 2
       mage_ability1: 2
       ability1: 2
+    - identified: 90
+      unidentified: 10
   belt_leather:
     weight: 3
-    adjective1:
-      none: 14
+    adjectives:
+    - none: 14
       strength1: 2
       endurance1: 2
       fortitude5: 2
@@ -38,10 +42,12 @@ weighted_entries:
       resistance_crushing1: 2
       resistance_piercing1: 2
       resistance_slashing1: 2
+    - identified: 90
+      unidentified: 10
   cloak:
     weight: 2
-    adjective1:
-      none: 14
+    adjectives:
+    - none: 14
       dexterity1: 2
       concealment5: 2
       defense5: 2
@@ -49,10 +55,12 @@ weighted_entries:
       resistance_cold1: 2
       resistance_shock1: 2
       resistance_fire1: 2
+    - identified: 90
+      unidentified: 10
   ring_copper:
     weight: 3
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       accuracy5: 1
       defense5: 1
       fortitude5: 1
@@ -60,10 +68,12 @@ weighted_entries:
       will5: 1
       reach1: 1
       action1: 1
+    - identified: 90
+      unidentified: 10
   ring_silver:
     weight: 2
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       accuracy5: 1
       defense5: 1
       fortitude5: 1
@@ -71,10 +81,12 @@ weighted_entries:
       will5: 1
       reach1: 1
       action1: 1
+    - identified: 90
+      unidentified: 10
   ring_gold:
     weight: 1
-    adjective1:
-      none: 7
+    adjectives:
+    - none: 7
       accuracy5: 1
       defense5: 1
       fortitude5: 1

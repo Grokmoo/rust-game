@@ -5,8 +5,8 @@ generate:
 weighted_entries:
   amulet_gold:
     weight: 1
-    adjective1:
-      none: 4
+    adjectives:
+    - none: 4
       perception1: 2
       wisdom1: 2
       intellect1: 2
@@ -15,10 +15,12 @@ weighted_entries:
       warlock_power1: 2
       mage_ability1: 2
       ability1: 2
+    - identified: 85
+      unidentified: 15
   amulet_silver:
     weight: 2
-    adjective1:
-      none: 4
+    adjectives:
+    - none: 4
       perception1: 2
       wisdom1: 2
       intellect1: 2
@@ -27,10 +29,12 @@ weighted_entries:
       warlock_power1: 2
       mage_ability1: 2
       ability1: 2
+    - identified: 85
+      unidentified: 15
   belt_leather:
     weight: 2
-    adjective1:
-      none: 4
+    adjectives:
+    - none: 4
       strength1: 2
       endurance1: 2
       fortitude5: 2
@@ -38,10 +42,12 @@ weighted_entries:
       resistance_crushing1: 2
       resistance_piercing1: 2
       resistance_slashing1: 2
+    - identified: 85
+      unidentified: 15
   cloak:
     weight: 2
-    adjective1:
-      none: 4
+    adjectives:
+    - none: 4
       dexterity1: 2
       concealment5: 2
       defense5: 2
@@ -49,10 +55,12 @@ weighted_entries:
       resistance_cold1: 2
       resistance_shock1: 2
       resistance_fire1: 2
+    - identified: 85
+      unidentified: 15
   ring_copper:
     weight: 2
-    adjective1:
-      none: 2
+    adjectives:
+    - none: 2
       accuracy5: 1
       defense5: 1
       fortitude5: 1
@@ -60,10 +68,12 @@ weighted_entries:
       will5: 1
       reach1: 1
       action1: 1
+    - identified: 85
+      unidentified: 15
   ring_silver:
     weight: 2
-    adjective1:
-      none: 2
+    adjectives:
+    - none: 2
       accuracy5: 1
       defense5: 1
       fortitude5: 1
@@ -71,10 +81,12 @@ weighted_entries:
       will5: 1
       reach1: 1
       action1: 1
+    - identified: 85
+      unidentified: 15
   ring_gold:
     weight: 1
-    adjective1:
-      none: 2
+    adjectives:
+    - none: 2
       accuracy5: 1
       defense5: 1
       fortitude5: 1

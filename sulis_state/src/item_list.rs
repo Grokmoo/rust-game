@@ -108,6 +108,14 @@ impl ItemList {
         Some(self.items.remove(index))
     }
 
+    pub fn identify(&mut self, index: usize) -> Option<&ItemState> {
+        if index >= self.items.len() {
+            return None;
+        }
+        self.items[index].1.identified = true;
+        Some(&self.items[index].1)
+    }
+
     /// Remove an item from the list at the specified index and returns it.
     /// Only removes one count, so the item may still exist if there is more
     /// than one

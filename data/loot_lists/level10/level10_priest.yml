@@ -8,11 +8,10 @@ sub_lists:
 probability_entries:
   torso_robe:
     weight: 80
-    adjective1:
-      fine: 5
+    adjectives:
+    - fine: 5
       exceptional: 5
-    adjective2:
-      none: 8
+    - none: 8
       will10: 2
       intellect2: 2
       mage_ability2: 2
@@ -23,11 +22,10 @@ probability_entries:
       resistance_fire2: 2
   helm_hood:
     weight: 80
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 2
+    - none: 2
       concealment10: 2
       wisdom2: 2
       concealment_ignore2: 2

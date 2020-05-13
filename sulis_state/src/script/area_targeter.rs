@@ -740,7 +740,7 @@ impl AreaTargeter {
                         warn!("Invalid item kind for targeter");
                         "".to_string()
                     }
-                    Some(item) => item.item.name.clone(),
+                    Some(item_state) => item_state.get_name(),
                 };
                 ScriptSource::Item {
                     kind: kind.clone(),

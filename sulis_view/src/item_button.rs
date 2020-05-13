@@ -21,7 +21,7 @@ use std::rc::Rc;
 use crate::bonus_text_arg_handler::{
     add_attack_text_args, add_bonus_text_args, add_prereq_text_args,
 };
-use crate::item_callback_handler::sell_item_cb;
+use crate::item_callback_handler::{sell_item_cb, identify_item_cb};
 use crate::{ItemActionMenu, MerchantWindow, RootView};
 use sulis_core::io::{event, keyboard_event::Key};
 use sulis_core::ui::{Callback, Widget, WidgetKind};
@@ -258,15 +258,21 @@ impl ItemButton {
         // window may change after the owing inventory window is opened
         let (root, root_view) = Widget::parent_mut::<RootView>(widget);
         if let Some(window_widget) = root_view.get_merchant_window(&root) {
-            let merchant_window = Widget::kind_mut::<MerchantWindow>(&window_widget);
+            let merchant = Widget::kind_mut::<MerchantWindow>(&window_widget).player();
 
-            let action = ButtonAction {
-                label: "Sell".to_string(),
-                callback: sell_item_cb(merchant_window.player(), item_index),
-                can_left_click: true,
-            };
-
-            Some(action)
+            if self.get_item_state().filter(|i| !i.identified).is_some() {
+                Some(ButtonAction {
+                    label: "Identify".to_string(),
+                    callback: identify_item_cb(merchant, item_index),
+                    can_left_click: true,
+                })
+            } else {
+                Some(ButtonAction {
+                    label: "Sell".to_string(),
+                    callback: sell_item_cb(merchant, item_index),
+                    can_left_click: true,
+                })
+            }
         } else {
             None
         }
@@ -328,11 +334,14 @@ impl WidgetKind for ItemButton {
         let icon = Widget::empty("icon");
         icon.borrow_mut().state.add_text_arg("icon", &self.icon);
 
+        let identified = self.get_item_state().filter(|i| i.identified).is_some();
         let adj = Widget::empty("adjectives_pane");
-        for icon in self.adjective_icons.iter() {
-            let widget = Widget::empty("icon");
-            widget.borrow_mut().state.add_text_arg("icon", icon);
-            Widget::add_child_to(&adj, widget);
+        if identified {
+            for icon in self.adjective_icons.iter() {
+                let widget = Widget::empty("icon");
+                widget.borrow_mut().state.add_text_arg("icon", icon);
+                Widget::add_child_to(&adj, widget);
+            }
         }
 
         let key_label = Widget::with_theme(Label::empty(), "key_label");
@@ -408,10 +417,12 @@ impl WidgetKind for ItemButton {
 
             item_window
                 .state
-                .add_text_arg("name", &item_state.item.name);
+                .add_text_arg("name", &item_state.get_name());
+            let value_str = if item_state.identified {"value"} else {"identification value"};
             item_window
                 .state
-                .add_text_arg("value", &format_item_value(item_state.item.value));
+                .add_text_arg(value_str, &format_item_value(item_state.item.value));
+
             item_window
                 .state
                 .add_text_arg("weight", &format_item_weight(item_state.item.weight));
@@ -431,28 +442,30 @@ impl WidgetKind for ItemButton {
                     if usable.consumable {
                         state.add_text_arg("consumable", "true");
                     }
-                    match usable.duration {
-                        ability::Duration::Rounds(rounds) => {
-                            state.add_text_arg("usable_duration", &rounds.to_string())
+                    if item_state.identified {
+                        match usable.duration {
+                            ability::Duration::Rounds(rounds) => {
+                                state.add_text_arg("usable_duration", &rounds.to_string())
+                            }
+                            ability::Duration::Mode => state.add_text_arg("usable_mode", "true"),
+                            ability::Duration::Instant => state.add_text_arg("usable_instant", "true"),
+                            ability::Duration::Permanent => {
+                                state.add_text_arg("usable_permanent", "true")
+                            }
                         }
-                        ability::Duration::Mode => state.add_text_arg("usable_mode", "true"),
-                        ability::Duration::Instant => state.add_text_arg("usable_instant", "true"),
-                        ability::Duration::Permanent => {
-                            state.add_text_arg("usable_permanent", "true")
-                        }
+                        state.add_text_arg("usable_description", &usable.short_description);
                     }
-                    state.add_text_arg("usable_description", &usable.short_description);
                 }
             }
 
             match item_state.item.equippable {
-                None => (),
-                Some(ref equippable) => {
+                Some(ref equippable) if item_state.identified => {
                     if let Some(ref attack) = equippable.attack {
                         add_attack_text_args(attack, &mut item_window.state);
                     }
                     add_bonus_text_args(&equippable.bonuses, &mut item_window.state);
-                }
+                },
+                _ => ()
             }
         }
         Widget::add_child_to(&root, Rc::clone(&item_window));

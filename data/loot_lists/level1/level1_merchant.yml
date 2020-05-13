@@ -28,223 +28,223 @@ probability_entries:
     quantity: [1, 4]
   boots_leather:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       worn: 5
   boots_mail:
     weight: 50
-    adjective1:
-      none: 2
+    adjectives:
+    - none: 2
       rusty: 8
   boots_plate:
     weight: 10
-    adjective1:
-      rusty: 10
+    adjectives:
+    - rusty: 10
   gloves_leather:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       worn: 5
   gloves_mail:
     weight: 50
-    adjective1:
-      none: 2
+    adjectives:
+    - none: 2
       rusty: 8
   gloves_plate:
     weight: 10
-    adjective1:
-      rusty: 10
+    adjectives:
+    - rusty: 10
   helm_leather:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       worn: 5
   helm_mail:
     weight: 50
-    adjective1:
-      none: 2
+    adjectives:
+    - none: 2
       rusty: 8
   helm_plate:
     weight: 10
-    adjective1:
-      rusty: 10
+    adjectives:
+    - rusty: 10
   legs_leather:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       worn: 5
   legs_mail:
     weight: 50
-    adjective1:
-      none: 2
+    adjectives:
+    - none: 2
       rusty: 8
   legs_plate:
     weight: 10
-    adjective1:
-      rusty: 10
+    adjectives:
+    - rusty: 10
   torso_leather:
     weight: 70
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       worn: 5
   torso_mail:
     weight: 40
-    adjective1:
-      none: 2
+    adjectives:
+    - none: 2
       rusty: 8
   torso_plate:
     weight: 5
-    adjective1:
-      rusty: 10
+    adjectives:
+    - rusty: 10
   shield_small:
     weight: 70
-    adjective1:
-      worn: 5
+    adjectives:
+    - worn: 5
     variant:
       none: 1
       "0": 1
   shield_large:
     weight: 50
-    adjective1:
-      worn: 5
+    adjectives:
+    - worn: 5
     variant:
       none: 1
       "0": 1
   shield_heater:
     weight: 60
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       worn: 5
     variant:
       none: 1
       "0": 1
   shield_kite:
     weight: 60
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       worn: 5
     variant:
       none: 1
       "0": 1
   battleaxe:
     weight: 50
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   club:
     weight: 80
   crossbow:
     weight: 50
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       worn: 5
   dagger:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   flail:
     weight: 10
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   greataxe:
     weight: 10
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   greathammer:
     weight: 10
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   greatsword:
     weight: 10
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   hatchet:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   longbow:
     weight: 10
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       worn: 5
   longspear:
     weight: 20
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   longsword:
     weight: 20
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   mace:
     weight: 50
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   morningstar:
     weight: 20
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   quarterstaff:
     weight: 80
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       worn: 5
   druid_staff:
     weight: 40
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       worn: 5
   shortbow:
     weight: 50
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       worn: 5
   shortspear:
     weight: 50
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   shortsword:
     weight: 50
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   warhammer:
     weight: 50
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   sickle:
     weight: 40
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   sabre:
     weight: 30
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   scimitar:
     weight: 10
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   halberd:
     weight: 10
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5
   glaive:
     weight: 10
-    adjective1:
-      none: 5
+    adjectives:
+    - none: 5
       rusty: 5

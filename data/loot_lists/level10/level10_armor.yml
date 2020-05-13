@@ -9,11 +9,10 @@ generate:
 weighted_entries:
   torso_robe:
     weight: 5
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 5
+    - none: 5
       will10: 2
       intellect2: 2
       mage_ability2: 2
@@ -22,211 +21,229 @@ weighted_entries:
       resistance_cold2: 2
       resistance_shock2: 2
       resistance_fire2: 2
+    - identified: 75
+      unidentified: 25
   helm_hood:
     weight: 5
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 4
+    - none: 4
       concealment10: 2
       wisdom2: 2
       concealment_ignore2: 2
       action2: 2
       bard_inspiration2: 2
+    - identified: 75
+      unidentified: 25
   helm_hat:
     weight: 5
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 4
+    - none: 4
       reflex10: 2
       dexterity2: 2
       concealment_ignore2: 2
       action2: 2
       bard_inspiration2: 2
+    - identified: 75
+      unidentified: 25
   boots_leather:
     weight: 5
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 4
+    - none: 4
       movement10: 2
       flanking10: 2
       initiative2: 2
       reflex10: 2
       resistance_cold2: 2
+    - identified: 75
+      unidentified: 25
   boots_mail:
     weight: 3
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 4
+    - none: 4
       movement10: 2
       flanking10: 2
       initiative2: 2
       reflex10: 2
       resistance_cold2: 2
+    - identified: 75
+      unidentified: 25
   boots_plate:
     weight: 2
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 4
+    - none: 4
       movement10: 2
       flanking10: 2
       initiative2: 2
       reflex10: 2
       resistance_cold2: 2
+    - identified: 75
+      unidentified: 25
   gloves_leather:
     weight: 5
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 3
+    - none: 3
       reflex10: 2
       dexterity2: 2
       reach2: 2
       resistance_fire2: 2
+    - identified: 75
+      unidentified: 25
   gloves_mail:
     weight: 3
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 3
+    - none: 3
       reflex10: 2
       dexterity2: 2
       reach2: 2
       resistance_fire2: 2
+    - identified: 75
+      unidentified: 25
   gloves_plate:
     weight: 2
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 3
+    - none: 3
       reflex10: 2
       dexterity2: 2
       reach2: 2
       resistance_fire2: 2
+    - identified: 75
+      unidentified: 25
   helm_leather:
     weight: 5
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 3
+    - none: 3
       perception2: 2
       accuracy10: 2
       concealment_ignore2: 2
       resistance_acid2: 2
+    - identified: 75
+      unidentified: 25
   helm_mail:
     weight: 3
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 3
+    - none: 3
       perception2: 2
       accuracy10: 2
       concealment_ignore2: 2
       resistance_acid2: 2
+    - identified: 75
+      unidentified: 25
   helm_plate:
     weight: 2
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 3
+    - none: 3
       perception2: 2
       accuracy10: 2
       concealment_ignore2: 2
       resistance_acid2: 2
+    - identified: 75
+      unidentified: 25
   legs_leather:
     weight: 5
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 3
+    - none: 3
       movement10: 2
       endurance2: 2
       action2: 2
       hit_points2: 2
+    - identified: 75
+      unidentified: 25
   legs_mail:
     weight: 3
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 3
+    - none: 3
       movement10: 2
       endurance2: 2
       action2: 2
       hit_points2: 2
+    - identified: 75
+      unidentified: 25
   legs_plate:
     weight: 2
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 3
+    - none: 3
       movement10: 2
       endurance2: 2
       action2: 2
       hit_points2: 2
+    - identified: 75
+      unidentified: 25
   torso_leather:
     weight: 5
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 5
+    - none: 5
       fortitude10: 2
       strength2: 2
       resistance_shock2: 2
       resistance_crushing2: 2
       resistance_piercing2: 2
       resistance_slashing2: 2
+    - identified: 75
+      unidentified: 25
   torso_mail:
     weight: 3
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 5
+    - none: 5
       fortitude10: 2
       strength2: 2
       resistance_shock2: 2
       resistance_crushing2: 2
       resistance_piercing2: 2
       resistance_slashing2: 2
+    - identified: 75
+      unidentified: 25
   torso_plate:
     weight: 2
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 5
+    - none: 5
       fortitude10: 2
       strength2: 2
       resistance_shock2: 2
       resistance_crushing2: 2
       resistance_piercing2: 2
       resistance_slashing2: 2
+    - identified: 75
+      unidentified: 25
   shield_small:
     weight: 5
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 5
+    - none: 5
       defense10: 2
       reflex10: 2
       reach2: 2
@@ -234,16 +251,17 @@ weighted_entries:
       resistance_crushing2: 2
       resistance_piercing2: 2
       resistance_slashing2: 2
+    - identified: 75
+      unidentified: 25
     variant:
       none: 1
       "0": 1
   shield_heater:
     weight: 5
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 5
+    - none: 5
       defense10: 2
       reflex10: 2
       reach2: 2
@@ -251,16 +269,17 @@ weighted_entries:
       resistance_crushing2: 2
       resistance_piercing2: 2
       resistance_slashing2: 2
+    - identified: 75
+      unidentified: 25
     variant:
       none: 1
       "0": 1
   shield_kite:
     weight: 5
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 5
+    - none: 5
       defense10: 2
       reflex10: 2
       reach2: 2
@@ -268,16 +287,17 @@ weighted_entries:
       resistance_crushing2: 2
       resistance_piercing2: 2
       resistance_slashing2: 2
+    - identified: 75
+      unidentified: 25
     variant:
       none: 1
       "0": 1
   shield_large:
     weight: 3
-    adjective1:
-      exceptional: 5
+    adjectives:
+    - exceptional: 5
       fine: 5
-    adjective2:
-      none: 5
+    - none: 5
       defense10: 2
       reflex10: 2
       reach2: 2
@@ -285,6 +305,8 @@ weighted_entries:
       resistance_crushing2: 2
       resistance_piercing2: 2
       resistance_slashing2: 2
+    - identified: 75
+      unidentified: 25
     variant:
       none: 1
       "0": 1
